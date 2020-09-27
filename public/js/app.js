@@ -10,7 +10,7 @@ weather.addEventListener("submit",(e)=>{
     const loc=search.value;
     temp.innerText="Loading....";
     forecast.innerText=" ";
-    fetch("http://localhost:3000/weather?location="+loc).then((response)=>{
+    fetch("/weather?location="+loc).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 temp.innerText=data.error;
