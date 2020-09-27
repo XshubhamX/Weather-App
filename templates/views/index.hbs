@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Server</title>
+</head>
+<body>
+    {{>header}}
+    <link rel="stylesheet" href="/css/index.html">
+     <form>
+       <div class="form-group">
+         <label for="exampleInputEmail1">Enter Location</label>
+         <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"> 
+       </div>
+       <button type="submit" class="btn btn-primary">Fetch</button>
+     </form>
+     <p1 class="h3" id="temperature"></p1><br>
+     <p1 class="h3" id="forecast"></p1>
+    </div></div>
+    {{>footer}}
+</body>
+   <script src="/js/app.js"></script>
+</html>
