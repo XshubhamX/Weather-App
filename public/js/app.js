@@ -17,7 +17,10 @@ weather.addEventListener("submit",(e)=>{
                 temp.innerText=data.error;
             }
             else{
-                loci.innerText=data.place_name[0]+"  "+data.place_name[1];
+                if(data.place_name[1]){
+                    loci.innerText=data.place_name[0]+"  "+data.place_name[1];
+                }
+                else if(data.place_name[1]==null){loci.innerText=data.place_name[0]}
                 temp.innerText="Temperature is "+ data.temp;
                 forecast.innerText="Fore Cast "+data.forecast;
             }
