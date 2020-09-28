@@ -7,6 +7,7 @@ const loci=document.getElementById("location");
 
 weather.addEventListener("submit",(e)=>{
     e.preventDefault();
+    loci.innerText="";
     const loc=search.value;
     temp.innerText="Loading....";
     forecast.innerText=" ";
