@@ -3,7 +3,7 @@ const search = document.querySelector('input')
 
 const temp=document.getElementById("temperature")
 const forecast=document.getElementById("forecast")
-
+const loci=document.getElementById("location");
 
 weather.addEventListener("submit",(e)=>{
     e.preventDefault();
@@ -16,6 +16,7 @@ weather.addEventListener("submit",(e)=>{
                 temp.innerText=data.error;
             }
             else{
+                loci.innerText=loc;
                 temp.innerText="Temperature is "+ data.temp;
                 forecast.innerText="Fore Cast "+data.forecast;
             }
