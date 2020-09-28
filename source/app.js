@@ -43,22 +43,14 @@ app.get("/weather",(req, res)=>{
             error:"Location Not Entered",
         })
     }
-    geocode.geocode(req.query.location,(error,l_t)=>{
-        if(error){
-            res.send({error:error})
-        }
-        if(l_t){
-            request.long_lat(l_t,(error,forecast)=>{
+    request.long_lat(req.query.location,(error,forecast)=>{
                 if(forecast){
                     res.send(forecast);
                 }
                 if(error){
                     res.send({error:error})
                 }
-            })}
-    })
-})
-
+            })})
 app.get("*",(req, res)=>{
     res.render("404",{
         name:"404 Page Not Found",
