@@ -16,7 +16,7 @@ weather.addEventListener("submit",(e)=>{
                 temp.innerText=data.error;
             }
             else{
-                loci.innerText=loc;
+                loci.innerText=loc.toUpperCase;
                 temp.innerText="Temperature is "+ data.temp;
                 forecast.innerText="Fore Cast "+data.forecast;
             }
