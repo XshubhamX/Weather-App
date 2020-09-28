@@ -33,7 +33,7 @@ app.get("/about",(req, res)=>{
 
 app.get("/help",(req, res)=>{
     res.render('help',{
-        desc:"This App will help you to find the temprature and current status of the location which you will provide. Componets used to make this app are Node.js,Express,Vanilla java script,Bootstrap,Html ",
+        desc:"This App will help you to find the temprature and current status of the location which you will provide. Components used to make this app are Node.js,Express,Vanilla java script,Bootstrap,Html ",
     })
 })
 
