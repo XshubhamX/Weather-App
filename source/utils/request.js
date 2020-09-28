@@ -8,7 +8,7 @@ const long_lat=(location,callback)=>{
         if(response.body.cod!=200){
             callback(response.body.message);
         }else if(response){
-            let x={temp:response.body.main.temp+"*C",forecast:response.body.weather[0].description,};
+            let x={temp:response.body.main.temp+"*C",forecast:response.body.weather[0].description,place_name:[response.body.name,response.body.sys.country]};
             callback(undefined,x)}
     })
 };
