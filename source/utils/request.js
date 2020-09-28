@@ -1,6 +1,6 @@
 const request=require("request");
 const long_lat=(location,callback)=>{
-    const url="http://api.openweathermap.org/data/2.5/weather?loc="+encodeURIComponent(location)+"&units=metric&APPID=b41f655b93c1a98b85c41a67bae0b0a7";
+    const url="http://api.openweathermap.org/data/2.5/weather?q="+encodeURIComponent(location)+"&units=metric&APPID=b41f655b93c1a98b85c41a67bae0b0a7";
     request({url:url,json:true},(error,response)=>{
         if(error){
             callback("Enter Valid Location");
